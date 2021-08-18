@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Swap II</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Swap%20II_files/css.css" rel="stylesheet">
+    <script src="Swap%20II_files/jquery-1.js"></script>
+<script src="Swap%20II_files/jquery-migrate-1.js"></script>
+
+    
+    
+
+       <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/scripts/html5shiv.js"></script>
+    <![endif]-->
+
+	
+	<!-- MathJax -->
+	<script type="text/x-mathjax-config;executed=true">
+	  MathJax.Hub.Config({    
+		tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+	  });
+	</script>
+	
+	<script type="text/javascript" src="Swap%20II_files/MathJax.js"></script>
+        
+	<style>
+		<!-- problems with chrome  -->
+		.MathJax .math * {
+			border-color: transparent !important;
+		}
+	</style>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style></head>
+<body><div style="display: none;" id="MathJax_Message"></div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+						<li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">MOG<b class="caret"></b></a><ul class="dropdown-menu"><li></li><li><a href="http://judge.matcom.uh.cu/arena/home/1">ACM-ICPC Arena</a></li><li></li><li><a href="http://judge.matcom.uh.cu/asm/home/1">Programación de Máquinas I</a></li><li></li><li><a href="http://judge.matcom.uh.cu/db/home/1">Base de Datos</a></li><li></li><li><a href="http://judge.matcom.uh.cu/eda/home/1">Estructuras de Datos y Algoritmos</a></li><li></li><li><a href="http://judge.matcom.uh.cu/home/1">ACM-ICPC</a></li><li></li><li><a href="http://judge.matcom.uh.cu/pf/home/1">Programación Funcional</a></li><li></li><li><a href="http://judge.matcom.uh.cu/prac/home/1">Prácticas de Producción</a></li><li></li><li><a href="http://judge.matcom.uh.cu/prog/home/1">Programación</a></li></ul></li>
+                        <li><a href="http://judge.matcom.uh.cu/asm/home">Inicio</a></li>
+                        <li><a href="http://judge.matcom.uh.cu/asm/users/1">Usuarios</a></li>
+                        <li><a href="http://judge.matcom.uh.cu/asm/problems/1">Problemas</a></li>
+                        <li><a href="http://judge.matcom.uh.cu/asm/contests/1">Concursos</a></li>
+                        <li><a href="http://judge.matcom.uh.cu/asm/posts/1">Publicaciones</a></li>
+                        <li><a href="http://judge.matcom.uh.cu/asm/submissions/">Envíos</a></li>
+                        <li><a href="http://judge.matcom.uh.cu/asm/faq">F.A.Q.</a></li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        
+                        
+<li class="divider-vertical"></li>
+    <li>
+        <a href="http://judge.matcom.uh.cu/asm/login?returnUrl=%2Fasm%2Fcontest%2FPEP%2FC" id="loginLink">Iniciar Sesión</a>
+    </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="page-header">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <a href="http://judge.matcom.uh.cu/asm/home">
+                            <img src="Swap%20II_files/logo.gif">
+                        </a>
+                    </div>
+                    <div class="span9">
+                        <div class="pull-right">
+                            <a href="http://judge.matcom.uh.cu/asm/localization/changeculture/es?returnUrl=%2Fasm%2Fcontest%2FPEP%2FC">
+                                <img src="Swap%20II_files/Spain-flag.png" alt="Spanish" class="flagSizeSmall"></a> |
+                            <a href="http://judge.matcom.uh.cu/asm/localization/changeculture?returnUrl=%2Fasm%2Fcontest%2FPEP%2FC">
+                                <img src="Swap%20II_files/USA-flag.png" alt="English" class="flagSizeSmall"></a>
+                        </div>
+                        <h1>Matcom Online Grader
+                                 <br>
+                            <small>Facultad de Matemática y Computación de la Universidad de La Habana</small>
+                        </h1>
+                            <h3>Programación de Máquinas I</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            
+            
+        </div>
+        <div class="row-fluid">
+            
+
+
+<div class="span3">
+    <div class="sidebar-nav">
+        <ul class="nav nav-list">
+            <div class="sidebar-nav">
+    <div class="nav-header">
+            Concurso
+    </div>
+    <div>
+        <table class="table table-bordered">
+            <tbody><tr>
+                <td>
+                    <h3 class="center"><a href="http://judge.matcom.uh.cu/asm/contest/PEP">Contest#3</a></h3>
+                        <h5 class="center">Finalizado</h5>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="nav nav-list">
+                        <li class="active"><a href="http://judge.matcom.uh.cu/asm/contest/PEP"><i class="icon-list-alt"></i>Problemas</a></li>
+                        <li class=""><a href="http://judge.matcom.uh.cu/asm/contest/PEP/standings"><i class="icon-signal"></i>Posiciones</a></li>
+                        <li class=""><a href="http://judge.matcom.uh.cu/asm/contest/PEP/submissions/"><i class="icon-road"></i>Envíos</a></li>
+                        <li class=""><a href="http://judge.matcom.uh.cu/asm/contest/PEP/submit/C"><i class="icon-envelope"></i>Enviar</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+</div>
+
+        </ul>
+    </div>
+</div>
+
+<div class="span9">
+    <section>
+        
+
+<div class="row-fluid">
+</div>
+
+<div class="statement">
+    
+    <h3>C - Swap II</h3>
+    <h5>Tiempo Límite: 1 segundo(s)</h5>
+    <h5>Límite de Memoria: 1 megabytes</h5>
+   
+    <ul class="nav nav-pills">
+        <li class="active"><a href="">Descripción</a></li>
+        <li><a href="http://judge.matcom.uh.cu/asm/contest/PEP/submissions/problem/C">Todos los envios</a></li>
+        <li><a href="http://judge.matcom.uh.cu/asm/contest/PEP/submissions/problem/C/result/accepted">Envíos Aceptados</a></li>
+        <li><a href="http://judge.matcom.uh.cu/asm/problem/PEPC/pdf">Descargar PDF</a></li>
+
+        <li><a href="http://judge.matcom.uh.cu/asm/contest/PEP/submit/C">Enviar</a></li>
+    </ul>
+    
+    Dado un entero <strong>N</strong>, tu tarea es hacerle swap todos los bits pares con los impares. Por ejemplo, si el número dado es 23 <br>(00010111), se convertirá en 43 (00101011). Cada bit en la posición par es intercambiada con el bit <br>adyacente en el lado derecho, y cada bit en la posición impar es intercambiada con el adyacente en el lado izquierdo.<br><not available=""></not>
+    <br>
+
+    <h4>Entrada</h4>
+    <span style="text-decoration:underline;">Línea 1: </span>Un entero <strong>N</strong> (1&lt;=<strong>N</strong>&lt;=2^32)<not available=""></not>
+    <br>
+
+    <h4>Salida</h4>
+    El resultado de hacerle swap a los bits de las posiciones pares con las impares<not available=""></not>
+    <br>
+
+    <h4>Caso(s) de Ejemplo</h4>
+
+    <aside>
+        <div class="sample-tests">
+        <div class="sample-test">
+            <div class="input">
+                <div class="title">Entrada</div>
+                <div class="pre">
+                    <span class="text">23</span>
+                </div>
+            </div>
+            <div class="output">
+                <div class="title">Salida</div>
+                <div class="pre">
+                    <span class="text">43</span>
+                </div>
+            </div>
+        </div>
+
+</div>
+    </aside>
+
+    
+</div>
+
+<div id="deleteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="deleteModalLabel">Eliminar</h3>
+    </div>
+    <div class="modal-body">
+        <p>Seguro que quiere eliminar este elemento</p>
+    </div>
+    <div class="modal-footer">
+        <form novalidate="novalidate" id="deleteFormModal" method="POST">
+            <button class="btn btn-danger" type="submit">Eliminar</button>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+    </section>
+</div>
+
+
+        </div>
+        <hr>
+        <footer>
+            <div class="center">
+                <p>© 2016 - MOG Version: 2.0.0.14</p>
+                <p>Grader Version: 2.0.0.22</p>
+                <p>Server Time: 11/8/2016 3:22:24 PM</p>
+            </div>
+        </footer>
+    </div>
+    <script src="Swap%20II_files/jquery_002.js"></script>
+<script src="Swap%20II_files/jquery.js"></script>
+<script src="Swap%20II_files/jquery_004.js"></script>
+<script src="Swap%20II_files/bootstrap.js"></script>
+<script src="Swap%20II_files/jquery_003.js"></script>
+<script src="Swap%20II_files/site.js"></script>
+
+    
+    
+
+    
+
+
+
+</body></html>
