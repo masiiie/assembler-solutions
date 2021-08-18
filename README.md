@@ -1,2 +1,2 @@
 # assembler-solutions
-Small problems solved in Assembler.
+Several small problems solved in Assembler.
