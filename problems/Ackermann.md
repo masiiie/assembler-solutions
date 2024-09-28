@@ -49,12 +49,3 @@ Una única línea con el valor de A(m,n)
 <p>Grader Version: 2.0.0.22</p>
 <p>Server Time: 12/1/2015 3:23:10 PM</p>
 </footer>
-This Markdown file contains all the content from your HTML page in a single format. Let me know if you need any further changes or additions!
-
----
-
-<footer>
-<p>© 2015 - MOG Version: 2.0.0.14</p>
-<p>Grader Version: 2.0.0.22</p>
-<p>Server Time: 12/1/2015 3:23:10 PM</p>
-</footer>
